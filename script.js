@@ -22,6 +22,22 @@ const foundationMaterials = {
   5: { Concrete: 10, Bricks: 2 },
 };
 
+const materialIcons = {
+  Branches: "Branches.png",
+  Logs: "Logs.png",
+  Rope: "Rope.png",
+  Rags: "Rags.png",
+  Planks: "Planks.png",
+  Nails: "Nails.png",
+  SheetMetal: "SheetMetal.png",
+  ScrapMetal: "ScrapMetal.png",
+  Rebars: "Rebars.png",
+  Concrete: "Concrete.png",
+  Cement: "Cement.png",
+  Bricks: "Bricks.png",
+};
+
+
 function mergeMaterials(base, addition, count) {
   for (const [mat, qty] of Object.entries(addition)) {
     base[mat] = (base[mat] || 0) + qty * count;
@@ -82,7 +98,7 @@ function calculate() {
   let html = "<h2>Required resources:</h2><ul>";
   for (const [mat, qty] of Object.entries(total)) {
     if (qty > 0) {
-      const imgSrc = `images/${mat}.png`;
+      const imgSrc = `images/${materialIcons[mat] }`;
       html += `
         <li>
           <img src="${imgSrc}" alt="${mat}" class="icon" />
@@ -99,7 +115,7 @@ function calculate() {
     html +=
       "<h2 style='margin-top:20px;'>Materials needed for crafting:</h2><ul>";
     for (const [mat, qty] of Object.entries(crafting)) {
-      const imgSrc = `images/${mat}.png`;
+      const imgSrc = `images/${materialIcons[mat] }`;
       html += `
         <li>
           <img src="${imgSrc}" alt="${mat}" class="icon" />
