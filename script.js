@@ -72,7 +72,6 @@ function calculate() {
 
   const crafting = calculateCraftingNeeds(total);
 
-  // scal Logs z crafting do total
   for (const [mat, qty] of Object.entries(crafting)) {
     if (mat === "Logs") {
       total[mat] = (total[mat] || 0) + qty;
@@ -80,7 +79,7 @@ function calculate() {
     }
   }
 
-  let html = "<h2>Wymagane surowce:</h2><ul>";
+  let html = "<h2>Required resources:</h2><ul>";
   for (const [mat, qty] of Object.entries(total)) {
     if (qty > 0) {
       const imgSrc = `images/${mat}.png`;
@@ -98,7 +97,7 @@ function calculate() {
 
   if (Object.keys(crafting).length > 0) {
     html +=
-      "<h2 style='margin-top:20px;'>Surowce potrzebne do craftingu:</h2><ul>";
+      "<h2 style='margin-top:20px;'>Materials needed for crafting:</h2><ul>";
     for (const [mat, qty] of Object.entries(crafting)) {
       const imgSrc = `images/${mat}.png`;
       html += `
@@ -116,7 +115,6 @@ function calculate() {
   document.getElementById("result").innerHTML = html;
 }
 
-// Dropdown toggle
 const dropdownToggle = document.getElementById("levelDropdownToggle");
 const dropdownList = document.getElementById("levelDropdown");
 
@@ -125,7 +123,6 @@ dropdownToggle.addEventListener("click", () => {
     dropdownList.style.display === "flex" ? "none" : "flex";
 });
 
-// Wybierz wszystkie checkboxy
 const selectAllCheckbox = document.getElementById("selectAllLevels");
 selectAllCheckbox.addEventListener("change", () => {
   const allCheckboxes = document.querySelectorAll(".level-checkbox");
@@ -133,7 +130,6 @@ selectAllCheckbox.addEventListener("change", () => {
   calculate();
 });
 
-// Monitoruj indywidualne checkboxy
 document.querySelectorAll(".level-checkbox").forEach((cb) => {
   cb.addEventListener("change", () => {
     const all = document.querySelectorAll(".level-checkbox");
@@ -143,7 +139,6 @@ document.querySelectorAll(".level-checkbox").forEach((cb) => {
   });
 });
 
-// Inicjalizacja
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("input").forEach((el) => {
     el.addEventListener("input", calculate);
@@ -166,20 +161,16 @@ document.querySelectorAll(".btn-minus, .btn-plus").forEach((btn) => {
   });
 });
 
-// Resetowanie wartości
 const resetBtn = document.getElementById("resetBtn");
 if (resetBtn) {
   resetBtn.addEventListener("click", () => {
-    // Reset wszystkich liczbowych inputów
     document.querySelectorAll("input[type='number']").forEach((el) => {
       el.value = 0;
     });
 
-    // Zaznacz "Wybierz wszystkie"
     const selectAll = document.getElementById("selectAllLevels");
     selectAll.checked = true;
 
-    // Zaznacz wszystkie poziomy
     document.querySelectorAll(".level-checkbox").forEach((cb) => {
       cb.checked = true;
     });
