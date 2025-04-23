@@ -2,7 +2,7 @@ const wallMaterials = {
   1: { Branches: 10 },
   2: { Logs: 6, Rope: 1 },
   3: { Planks: 10, Nails: 4 },
-  4: { "SheetMetal": 10, Rebars: 2 },
+  4: { SheetMetal: 10, Rebars: 2 },
   5: { Concrete: 10, Bricks: 2 },
 };
 
@@ -10,7 +10,7 @@ const floorMaterials = {
   1: { Branches: 10 },
   2: { Logs: 6, Rope: 1 },
   3: { Planks: 10, Nails: 4 },
-  4: { "SheetMetal": 10, Rebars: 2 },
+  4: { SheetMetal: 10, Rebars: 2 },
   5: { Concrete: 10, Bricks: 2 },
 };
 
@@ -18,7 +18,7 @@ const foundationMaterials = {
   1: { Branches: 10 },
   2: { Logs: 6, Rope: 2 },
   3: { Planks: 10, Nails: 4 },
-  4: { "SheetMetal": 10, Rebars: 2 },
+  4: { SheetMetal: 10, Rebars: 2 },
   5: { Concrete: 10, Bricks: 2 },
 };
 
@@ -29,8 +29,8 @@ const materialIcons = {
   Rags: "rags.png",
   Planks: "planks.png",
   Nails: "nails.png",
-  SheetMetal: "SheetMetal.png",
-  ScrapMetal: "ScrapMetal.png",
+  SheetMetal: "sheet metal.png",
+  ScrapMetal: "scrap metal.png",
   Rebars: "rebars.png",
   Concrete: "concrete.png",
   Cement: "cement.png",
