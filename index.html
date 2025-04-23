@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kalkulator Budowy Bazy</title>
+    <title>Deadside Base Build Calculator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Kalkulator Budowy Bazy</h1>
+      <h1>Base Build Calculator</h1>
 
       <!-- Sekcja danych -->
       <div class="section">
-        <h2>Dane do obliczenia</h2>
+        <h2>Data for calculation</h2>
         <div class="form-group">
           <div class="input-row">
             <div class="input-box">
               <div class="number-wrapper">
-                <label for="Walls">Ściany:</label>
+                <label for="Walls">Walls:</label>
                 <div class="custom-number">
                   <button class="btn-minus" data-target="Walls">−</button>
                   <input type="number" id="Walls" value="0" min="0" />
@@ -27,7 +27,7 @@
             </div>
             <div class="input-box">
               <div class="number-wrapper">
-                <label for="Floors">Podłogi:</label>
+                <label for="Floors">Floors:</label>
                 <div class="custom-number">
                   <button class="btn-minus" data-target="Floors">−</button>
                   <input type="number" id="Floors" value="0" min="0" />
@@ -37,7 +37,7 @@
             </div>
             <div class="input-box">
               <div class="number-wrapper">
-                <label for="Foundations">Fundamenty:</label>
+                <label for="Foundations">Foundations:</label>
                 <div class="custom-number">
                   <button class="btn-minus" data-target="Foundations">−</button>
                   <input type="number" id="Foundations" value="0" min="0" />
@@ -47,12 +47,12 @@
             </div>
             <div class="dropdown-container">
               <div class="dropdown-header" id="levelDropdownToggle">
-                Wybierz poziomy ▾
+                Select levels ▾
               </div>
               <div class="dropdown-list" id="levelDropdown">
                 <label
                   ><input type="checkbox" id="selectAllLevels" checked />
-                  Wybierz wszystkie</label
+                  Select all</label
                 >
                 <label
                   ><input
@@ -100,7 +100,7 @@
         </div>
       </div>
 
-      <button id="resetBtn" class="reset">Resetuj dane</button>
+      <button id="resetBtn" class="reset">Reset data</button>
 
       <div id="result"></div>
     </div>
