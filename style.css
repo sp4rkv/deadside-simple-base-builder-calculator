@@ -1,4 +1,3 @@
-/* Reset podstawowy */
 * {
   margin: 0;
   padding: 0;
@@ -183,7 +182,7 @@ button.reset:hover {
     transform: scaleY(1);
   }
 }
-/* Nowoczesne checkboxy */
+
 input[type="checkbox"] {
   appearance: none;
   width: 20px;
@@ -255,7 +254,6 @@ input[type="number"]:focus {
   box-shadow: 0 0 0 2px rgba(0, 184, 148, 0.3);
 }
 
-/* Usunięcie strzałek w Chrome */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
