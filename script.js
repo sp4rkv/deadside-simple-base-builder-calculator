@@ -23,18 +23,18 @@ const foundationMaterials = {
 };
 
 const materialIcons = {
-  Branches: "Branches.png",
-  Logs: "Logs.png",
-  Rope: "Rope.png",
-  Rags: "Rags.png",
-  Planks: "Planks.png",
-  Nails: "Nails.png",
-  SheetMetal: "SheetMetal.png",
-  ScrapMetal: "ScrapMetal.png",
-  Rebars: "Rebars.png",
-  Concrete: "Concrete.png",
-  Cement: "Cement.png",
-  Bricks: "Bricks.png",
+  Branches: "branches.png",
+  Logs: "logs.png",
+  Rope: "rope.png",
+  Rags: "rags.png",
+  Planks: "planks.png",
+  Nails: "nails.png",
+  SheetMetal: "sheet metal.png",
+  ScrapMetal: "scrap metal.png",
+  Rebars: "rebars.png",
+  Concrete: "concrete.png",
+  Cement: "cement.png",
+  Bricks: "bricks.png",
 };
 
 
